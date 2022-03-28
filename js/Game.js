@@ -159,6 +159,10 @@ class Game {
           camera.position.y = cars[index - 1].position.y;
         }
       }
+      if(this.playerMoving){
+     player.positionY+=5;
+     player.update();   
+      }
 
       //manipulando eventos de teclado
       this.handlePlayerControls();
@@ -257,7 +261,7 @@ class Game {
 
   handlePlayerControls() {
     if (keyIsDown(UP_ARROW)) {
-     this.playerMovinhg = true 
+     this.playerMoving = true 
       player.positionY += 10;
       player.update();
     }
